@@ -40,4 +40,5 @@ public class RobotMain : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, horizontal * rotationSpeed * Time.deltaTime, 0);
         rb.MoveRotation(rb.rotation * rotation);
     }
+    
 }
