@@ -8,6 +8,8 @@ public class RobotMain : MonoBehaviour
     public float moveSpeed;
     public float rotationSpeed;
     public Transform top;
+    public LayerMask rayEffect;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,7 @@ public class RobotMain : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if(Physics.Raycast(ray, out hit, 100))
+        if(Physics.Raycast(ray, out hit, 100, rayEffect))
         {
             Vector3 viewDirection = hit.point - transform.position;
             viewDirection.y = 0;
