@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Soup
+  - Enemy
+  - Hate
   layers:
   - Default
   - TransparentFX

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoupSearcher : MonoBehaviour
+public class HateFinder : MonoBehaviour
 {
+    public GameObject myParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +20,10 @@ public class SoupSearcher : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Soup")
+        if(other.gameObject.tag == "Hate" && myParent.GetComponent<Health>().happy)
         {
-            Destroy(transform.parent.gameObject);
+            myParent.GetComponent<Health>().ChangeFeeling(0);
+            Destroy(other.gameObject);
         }
-
-        if(other.gameObject.GetComponent<Health>())
-        {
-            other.gameObject.GetComponent<Health>().myHealth -= 1;
-            //Destroy(transform.parent.gameObject);
-        }
-
     }
 }
