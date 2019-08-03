@@ -18,9 +18,11 @@ public class SoupSearcher : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Soup")
+        if(other.gameObject.tag == "Hate")
         {
+            Destroy(other.gameObject);
             Destroy(transform.parent.gameObject);
+            
         }
 
         if(other.gameObject.GetComponent<Health>())

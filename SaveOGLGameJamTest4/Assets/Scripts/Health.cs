@@ -9,9 +9,16 @@ public class Health : MonoBehaviour
     public Sprite happyFace;
     public Sprite angryFace;
     public bool happy;
+
+    // Love
+    public GameObject love;
+    public float loveSpeed;
+    float lastLove;
+
+    // Hate
+    public GameObject hate;
     public float hateSpeed;
     float lastHate;
-    public GameObject hate;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,12 @@ public class Health : MonoBehaviour
             Vector3 location = transform.position + new Vector3(0, 2, 0);
             Instantiate(hate, location, Quaternion.identity);
             lastHate = Time.time;
+        }
+        else if(happy && Time.time - lastLove >= loveSpeed)
+        {
+            Vector3 location = transform.position + new Vector3(0, 2, 0);
+            Instantiate(love, location, Quaternion.identity);
+            lastLove = Time.time;
         }
 
     }
