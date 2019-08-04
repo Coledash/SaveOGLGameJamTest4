@@ -64,9 +64,9 @@ public class RobotShoot : MonoBehaviour
     {           
         if(cannonCount < 4)
             cannonCount += cannon;
-        if(shootingPower < 5000)
+        if(shootingPower < 4000)
             shootingPower += cannonPower;
-        if(shootingSpeed > 0.05)
+        if(shootingSpeed > 0.10)
             shootingSpeed *= cannonSpeed;
     }
 
