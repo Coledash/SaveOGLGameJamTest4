@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public Sprite happyFace;
     public Sprite angryFace;
     public bool happy;
+    public GameObject[] zombieSounds;
 
     // Love
     public GameObject love;
@@ -53,12 +54,18 @@ public class Health : MonoBehaviour
             lastLove = Time.time;
         }
 
+        if(!happy && Random.Range(0, 4000) == 0)
+        {
+            Instantiate(zombieSounds[Random.Range(0, zombieSounds.Length)]);
+        }
+
     }
 
     public void ChangeFeeling(int feeling)
     {
         if(feeling == 1)
         {
+            GameManager.instance.lovers++;
             happy = true;
             for(int i = 0; i<myFaces.Length; i++)
             {
@@ -67,6 +74,7 @@ public class Health : MonoBehaviour
         }
         else
         {
+            GameManager.instance.lovers--;
             happy = false;
             for(int i = 0; i<myFaces.Length; i++)
             {

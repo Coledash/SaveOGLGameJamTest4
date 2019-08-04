@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 8543253353171055605}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 1054085034}
   m_Layer: 0
   m_Name: Robot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -560,6 +560,12 @@ MonoBehaviour:
   rayEffect:
     serializedVersion: 2
     m_Bits: 256
+  jumpSounds:
+  - {fileID: 1907336834064116256, guid: c4976e1d48030144e88ad08f68a68072, type: 3}
+  - {fileID: 3037316213976609505, guid: 62f72dbacc4f5bb4cb34e770811e22af, type: 3}
+  - {fileID: 5540285045666745794, guid: 3e1e3aac4f337fc47b347b014fdcac13, type: 3}
+  - {fileID: 4416557830981177102, guid: 4fb361af241393d41870256d88ad48d8, type: 3}
+  - {fileID: 2199692560354724251, guid: ef65357966f54cd45ae1eef6363ee19a, type: 3}
 --- !u!114 &1054085034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,9 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661b33ec4e72f9840951c99144a28414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cannons: []
-  shootingPower: 50
-  shootingSpeed: 0.05
+  shootingPower: 100
+  shootingSpeed: 3
   cannonEnd: {fileID: 6430895561019120342}
   bullet: {fileID: 4017807344276237824, guid: e6960f7ecd9859f44ad9f1ae6b2b0447, type: 3}
   cannonEndVector3: {x: 0, y: 0, z: 0}
@@ -589,6 +594,9 @@ MonoBehaviour:
   - {fileID: 175849206904393627}
   - {fileID: 6398099899046878735}
   currentColor: 0
+  cannonCount: 1
+  shootSounds:
+  - {fileID: 744144171728483234, guid: 419c05da7a5a2bd408efacc6c9548ecb, type: 3}
 --- !u!1 &8543253353730912728
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +611,7 @@ GameObject:
   - component: {fileID: 8543253353730912730}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

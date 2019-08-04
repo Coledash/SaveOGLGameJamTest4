@@ -259,8 +259,19 @@ MonoBehaviour:
   happyFace: {fileID: 21300000, guid: e49edfd7169d4234fb3308fbbb0ff738, type: 3}
   angryFace: {fileID: 21300000, guid: b9fc17d8ff704d6439184db8eaf4b288, type: 3}
   happy: 0
+  zombieSounds:
+  - {fileID: 572684886909983544, guid: 4e1c268826165c24cb743f39ddfd6c6e, type: 3}
+  - {fileID: 5212074227907925178, guid: b6d9fb7df395dd84babb900aba7b173f, type: 3}
+  - {fileID: 7693631854340396729, guid: c1a91c3a99d51f44789ce07abc0d4186, type: 3}
+  - {fileID: 6225420041004238213, guid: d43c14350114fab4abf8256eca9d0e9f, type: 3}
+  - {fileID: 1091265986226736770, guid: ad00b9765ae30cf46b0dd7f7ca6cb602, type: 3}
+  - {fileID: 224381551966788028, guid: 6dc81bf67954ba54794a38d8fd69f5f2, type: 3}
+  - {fileID: 4918592444584176278, guid: ae419a0e95f16a548bb22fd169ddfd9f, type: 3}
+  - {fileID: 2882011319604152216, guid: 228d9fcf20e48d049879ef9e7cea3b8a, type: 3}
+  - {fileID: 4057341516400046789, guid: 4bc6147a55891c541ab3983459efd034, type: 3}
+  - {fileID: 6557336791670993412, guid: 07b5a205f86f8a346b61c4bc53dfa53c, type: 3}
   love: {fileID: 1268728372353671723, guid: 20cd92456afb838418701ccbdcf43482, type: 3}
-  loveSpeed: 4
+  loveSpeed: 8
   hate: {fileID: 1759473817996161753, guid: a22f69e0dadda644c8096ffba2e403d0, type: 3}
   hateSpeed: 2
 --- !u!114 &488906209941732773

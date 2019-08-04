@@ -9,6 +9,7 @@ public class RobotMain : MonoBehaviour
     public float rotationSpeed;
     public Transform top;
     public LayerMask rayEffect;
+    public GameObject[] jumpSounds;
     
 
     // Start is called before the first frame update
@@ -28,6 +29,12 @@ public class RobotMain : MonoBehaviour
             viewDirection.y = 0;
             top.rotation = Quaternion.LookRotation(viewDirection);
         }
+
+        if(Input.GetKeyDown(KeyCode.Space) && transform.position.y < 4.51f)
+        {
+            rb.velocity = transform.up * 10;
+            Instantiate(jumpSounds[Random.Range(0, jumpSounds.Length)]);
+        }
     }
 
     void FixedUpdate()
@@ -39,6 +46,8 @@ public class RobotMain : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         Quaternion rotation = Quaternion.Euler(0, horizontal * rotationSpeed * Time.deltaTime, 0);
         rb.MoveRotation(rb.rotation * rotation);
+
+        
     }
     
 }

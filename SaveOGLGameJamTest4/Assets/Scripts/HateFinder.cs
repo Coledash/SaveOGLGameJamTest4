@@ -25,5 +25,11 @@ public class HateFinder : MonoBehaviour
             myParent.GetComponent<Health>().ChangeFeeling(0);
             Destroy(other.gameObject);
         }
+
+        if(other.gameObject.tag == "Love" && myParent.GetComponent<Health>().happy == false)
+        {
+            myParent.GetComponent<Health>().ChangeFeeling(1);
+            Destroy(other.gameObject);
+        }
     }
 }

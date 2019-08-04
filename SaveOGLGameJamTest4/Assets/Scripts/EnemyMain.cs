@@ -9,6 +9,7 @@ public class EnemyMain : MonoBehaviour
     public Transform destination;
     public GameObject myFace;
     public int destinationNumber;
+    
 
     void Start()
     {
@@ -35,6 +36,7 @@ public class EnemyMain : MonoBehaviour
             agent.destination = GameManager.instance.agentDestinations[destinationNumber].position;
         }
 
+        
     }
 
 }
